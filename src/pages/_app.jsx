@@ -9,7 +9,6 @@ export const Container = styled.div`
   grid-template-areas:
     "banner"
     "main";
-  /* background-color: blueviolet; */
 `;
 
 function MyApp({ Component, pageProps }) {
