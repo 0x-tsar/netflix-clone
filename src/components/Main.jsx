@@ -9,11 +9,16 @@ export const Container = styled.div`
   /* flex-direction: column; */
 `;
 
-const Main = () => {
+const Main = ({ data }) => {
   return (
     <Container>
-      <Row></Row>
-      <Row></Row>
+      <Row data={data.action} genre="Action"></Row>
+      <Row data={data.adventure} genre="Adventure"></Row>
+      <Row data={data.animation} genre="Animation"></Row>
+      <Row data={data.comedy} genre="Comedy"></Row>
+      <Row data={data.crime} genre="Crime"></Row>
+      <Row data={data.documentary} genre="Documentary"></Row>
+      <Row data={data.drama} genre="Drama"></Row>
     </Container>
   );
 };
