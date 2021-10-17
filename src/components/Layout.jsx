@@ -12,7 +12,7 @@ export const Header = styled.div`
   width: 100vw;
   height: 70px;
   position: fixed;
-  z-index: 8001;
+  z-index: 99999;
 
   display: flex;
   align-items: center;
