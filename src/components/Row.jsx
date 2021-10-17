@@ -12,6 +12,10 @@ export const Container = styled.div`
   margin: 0 100px;
   margin-bottom: 10px;
   z-index: 1;
+
+  @media only screen and (min-width: 1750px) {
+    height: 18em;
+  }
 `;
 
 const Row = ({ data, genre }) => {

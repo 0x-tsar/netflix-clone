@@ -10,10 +10,14 @@ body {
   scrollbar-width: none; /* Firefox */
   background-color: black;
 
-  overflow-x: hidden;
-  height: 230vh;
+  /* height: 230vh; */
   /* min-height: 130vh; */
   /* overflow-y: initial; */
+  /* min-height: 100%; */
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul {
