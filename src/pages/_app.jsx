@@ -1,20 +1,53 @@
 import "../../styles/globals.css";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import FetchItems from "./api/FetchItems";
+import { useEffect, useState } from "react";
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40vh 100%;
+  grid-template-rows: 50vh min-content;
   grid-template-areas:
     "banner"
+    "grad"
     "main";
 `;
 
+export const Gradient = styled.div`
+  /* width: 100vw;
+  height: 100px; */
+  /* margin-top: 10px; */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 1) 80%
+  );
+`;
+
 function MyApp({ Component, pageProps }) {
+  const [currentBackdrop, setCurrentBackdrop] = useState("");
+
+  useEffect(() => {
+    const done = async () => {
+      const data = await FetchItems();
+      const randomGenreNum = Math.floor(
+        Math.random() * Object.keys(data).length
+      );
+      const randomGenre = Object.keys(data)[randomGenreNum];
+      const values = Object.values(data)[randomGenreNum];
+      const chosenMovie = values[Math.floor(Math.random() * values.length)];
+      const movieBanner = chosenMovie.backdrop_path;
+      setCurrentBackdrop(`https://image.tmdb.org/t/p/original/${movieBanner}`);
+    };
+
+    done();
+  }, []);
+
   return (
     <Container>
-      <Layout></Layout>
+      <Layout currentBackdrop={currentBackdrop}></Layout>
+      <Gradient style={{ gridArea: "grad" }} />
       <Component {...pageProps} />
     </Container>
   );

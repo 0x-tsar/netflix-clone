@@ -4,13 +4,13 @@ import Banner from "../components/Banner";
 
 export const Container = styled.div`
   grid-area: banner;
-  background-color: red;
+  /* background-color: red; */
 `;
 
-const Layout = () => {
+const Layout = ({ currentBackdrop }) => {
   return (
     <Container>
-      <Banner></Banner>
+      <Banner currentBackdrop={currentBackdrop}></Banner>
     </Container>
   );
 };

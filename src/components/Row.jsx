@@ -22,7 +22,10 @@ const Row = ({ data, genre }) => {
         return item.backdrop_path ? (
           <Card key={key} item={item} genre={genre}></Card>
         ) : (
-          <div style={{ position: "absolute", display: "none" }}></div>
+          <div
+            key={key}
+            style={{ position: "absolute", display: "none" }}
+          ></div>
         );
       })}
     </Container>

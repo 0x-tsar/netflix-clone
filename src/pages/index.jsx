@@ -7,7 +7,8 @@ import Main from "../components/Main";
 
 export const Container = styled.div`
   grid-area: main;
-  background-color: black;
+  /* background-color: black; */
+  /* margin-top: -100px; */
 `;
 
 export const getServerSideProps = async (context) => {
@@ -70,8 +71,6 @@ export default function Home(data) {
   //   const done = async () => {};
   //   done();
   // }, []);
-
-  console.log(data.data);
 
   return (
     <Container>
