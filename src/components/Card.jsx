@@ -8,8 +8,10 @@ export const Container = styled.div`
   height: 100%;
   display: inline-block;
   margin-right: 5px;
-  /* padding-bottom: 100px; */
-  /* color: white; */
+
+  @media only screen and (min-width: 1750px) {
+    margin-right: 120px;
+  }
 `;
 
 export const Holder = styled.div`
@@ -27,6 +29,16 @@ export const Holder = styled.div`
   :hover {
     transform: scale(1.5) translateY(-30px);
     z-index: 2000;
+  }
+
+  @media only screen and (min-width: 1750px) {
+    width: 300px;
+    margin-right: 200px;
+
+    img {
+      width: 400px;
+    }
+    /* height: 100%; */
   }
 `;
 

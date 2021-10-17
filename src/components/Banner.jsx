@@ -5,13 +5,6 @@ import Image from "next/image";
 export const Container = styled.div`
   /* background-color: green; */
   height: 100%;
-
-  @media only screen and (min-width: 728px) {
-    /* padding: 4px !important; */
-    /* background-color: red; */
-    height: 70%;
-    margin: 0;
-  }
 `;
 
 export const Gradient = styled.div`
@@ -32,6 +25,10 @@ export const Gradient = styled.div`
 
 export const Img = styled.img`
   width: 100vw;
+
+  @media only screen and (min-width: 900) {
+    z-index: 2000;
+  }
 `;
 
 const Banner = ({ currentBackdrop }) => {
@@ -40,7 +37,6 @@ const Banner = ({ currentBackdrop }) => {
     <Container>
       <div
         style={{
-          maxHeight: "60vh",
           overflow: "hidden",
         }}
       >

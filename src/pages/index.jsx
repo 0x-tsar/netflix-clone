@@ -11,9 +11,17 @@ export const Container = styled.div`
   /* margin-top: -100px; */
   margin-top: -100px;
 
-  /* @media only screen and (max-width: 728px) {
+  @media only screen and (max-width: 780px) {
     margin-top: -220px;
-  } */
+  }
+
+  @media only screen and (min-width: 1400px) {
+    margin-top: 100px;
+  }
+
+  @media only screen and (min-width: 1750px) {
+    margin-top: 300px;
+  }
 `;
 
 export const getServerSideProps = async (context) => {

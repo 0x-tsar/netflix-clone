@@ -9,6 +9,11 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   background-color: black;
+
+  overflow-x: hidden;
+  height: 230vh;
+  /* min-height: 130vh; */
+  /* overflow-y: initial; */
 }
 
 ul {

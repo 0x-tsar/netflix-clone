@@ -11,14 +11,6 @@ export const Container = styled.div`
   grid-template-areas:
     "banner"
     "main";
-  /* 
-  @media only screen and (min-width: 728px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50vh min-content;
-    grid-template-areas:
-      "banner"
-      "main";
-  } */
 `;
 
 function MyApp({ Component, pageProps }) {
