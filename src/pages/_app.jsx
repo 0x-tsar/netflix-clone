@@ -10,19 +10,15 @@ export const Container = styled.div`
   grid-template-rows: 50vh min-content;
   grid-template-areas:
     "banner"
-    "grad"
     "main";
-`;
-
-export const Gradient = styled.div`
-  /* width: 100vw;
-  height: 100px; */
-  /* margin-top: 10px; */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 1) 80%
-  );
+  /* 
+  @media only screen and (min-width: 728px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh min-content;
+    grid-template-areas:
+      "banner"
+      "main";
+  } */
 `;
 
 function MyApp({ Component, pageProps }) {
@@ -47,7 +43,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <Container>
       <Layout currentBackdrop={currentBackdrop}></Layout>
-      <Gradient style={{ gridArea: "grad" }} />
       <Component {...pageProps} />
     </Container>
   );

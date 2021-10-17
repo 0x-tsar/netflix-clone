@@ -9,6 +9,11 @@ export const Container = styled.div`
   grid-area: main;
   /* background-color: black; */
   /* margin-top: -100px; */
+  margin-top: -100px;
+
+  /* @media only screen and (max-width: 728px) {
+    margin-top: -220px;
+  } */
 `;
 
 export const getServerSideProps = async (context) => {

@@ -12,12 +12,13 @@ export const Container = styled.div`
   margin: 0 100px;
   /* margin-top: 50px; */
   /* margin-bottom: 10px; */
+  z-index: 1;
 `;
 
 const Row = ({ data, genre }) => {
   return (
     <Container>
-      <h2>{genre}</h2>
+      <h2 style={{ textShadow: "1px 1px rgba(0,0,0,0.6)" }}>{genre}</h2>
       {data.map((item, key) => {
         return item.backdrop_path ? (
           <Card key={key} item={item} genre={genre}></Card>

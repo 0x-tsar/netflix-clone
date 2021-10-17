@@ -10,3 +10,4 @@
 [ ] add header with menus and logo
 
 [ ] to figure it out the width of the rows, the widh of them should be multiplied
+[ ] there is a backdrop_path image missing, that is the reason sometimes no bg appears, fix it
