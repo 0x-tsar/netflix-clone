@@ -9,9 +9,11 @@ export const Container = styled.div`
   padding: 5px;
   margin: 2px;
   color: #ffffffc4;
+  /* background-color: green; */
   margin: 0 100px;
   /* margin-top: 50px; */
   /* margin-bottom: 10px; */
+  margin-bottom: 10px;
   z-index: 1;
 `;
 
