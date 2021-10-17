@@ -28,7 +28,7 @@ export const Holder = styled.div`
 
   :hover {
     transform: scale(1.5) translateY(-30px);
-    z-index: 2000;
+    z-index: 999;
   }
 
   @media only screen and (min-width: 1750px) {

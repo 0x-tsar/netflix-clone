@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
 
@@ -11,16 +11,53 @@ export const Container = styled.div`
   color: #ffffffc4;
   margin: 0 100px;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 9999;
+  display: block;
 
   @media only screen and (min-width: 1750px) {
     height: 18em;
   }
 `;
 
+export const HolderArrows = styled.div`
+  width: 50px;
+  height: 13em;
+  /* background-color: #ff000040; */
+  background-color: #ffffff78;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 20;
+
+  :hover {
+    background-color: white;
+  }
+`;
+
 const Row = ({ data, genre }) => {
+  // const [left, setLeft] = useState(0);
+  // const [right, setRight] = useState(0);
+  const [showing, setShowing] = useState("none");
+
   return (
-    <Container>
+    <Container
+      onMouseEnter={() => {
+        setShowing("flex");
+      }}
+      onMouseLeave={() => {
+        setShowing("none");
+      }}
+    >
+      <HolderArrows
+        style={{ left: 0, marginLeft: 10, display: showing }}
+      ></HolderArrows>
+      <HolderArrows
+        style={{
+          right: 0,
+          marginRight: 10,
+          display: showing,
+        }}
+      ></HolderArrows>
       <h2 style={{ textShadow: "1px 1px rgba(0,0,0,0.6)" }}>{genre}</h2>
       {data.map((item, key) => {
         return item.backdrop_path ? (

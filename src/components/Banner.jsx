@@ -19,6 +19,9 @@ export const Gradient = styled.div`
     rgba(0, 0, 0, 0) 20%,
     rgba(0, 0, 0, 1) 80%
   );
+
+  transition-duration: 0.3s;
+
   position: relative;
   margin-top: -100px;
 `;
