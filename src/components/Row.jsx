@@ -9,7 +9,8 @@ export const Container = styled.div`
   padding: 5px;
   margin: 2px;
   color: #ffffffc4;
-  margin: 0 100px;
+  margin: 0 10px;
+  padding-left: 100px;
   margin-bottom: 10px;
   z-index: 9999;
   display: block;
@@ -27,7 +28,7 @@ export const HolderArrows = styled.div`
   cursor: pointer;
   margin-top: 20px;
   position: absolute;
-  z-index: 20;
+  z-index: 20000;
 
   :hover {
     background-color: white;
