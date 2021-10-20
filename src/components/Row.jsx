@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import Card from "./Card";
 
@@ -8,6 +8,7 @@ export const Container = styled.div`
   height: 14em;
   padding: 5px;
   margin: 2px;
+  background-color: green;
   color: #ffffffc4;
   margin: 0 10px;
   padding-left: 100px;
@@ -39,9 +40,11 @@ const Row = ({ data, genre }) => {
   // const [left, setLeft] = useState(0);
   // const [right, setRight] = useState(0);
   const [showing, setShowing] = useState("none");
+  const rowRef = useRef();
 
   return (
     <Container
+      ref={rowRef}
       onMouseEnter={() => {
         setShowing("flex");
       }}
@@ -53,6 +56,13 @@ const Row = ({ data, genre }) => {
         style={{ left: 0, marginLeft: 10, display: showing }}
       ></HolderArrows>
       <HolderArrows
+        onClick={(e) => {
+          // console.log(rowRef.current.style);
+          // console.log(e.target.style);
+          // console.log(e.target.parentNode);
+          // e.target.style.display = "none"
+          e.target.parentNode.style.transform = "translateX(-100px)";
+        }}
         style={{
           right: 0,
           marginRight: 10,
